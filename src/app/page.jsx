@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
-import 'aframe';
-import 'mind-ar/dist/mindar-image-aframe.prod.js';
+import "aframe";
+import "mind-ar/dist/mindar-image-aframe.prod.js";
 
 export default function Home() {
   function adjustLogoSize() {
@@ -18,7 +18,6 @@ export default function Home() {
     }
   }
   useEffect(() => {
-   
     window.addEventListener("load", adjustLogoSize);
     window.addEventListener("resize", adjustLogoSize);
 
@@ -29,7 +28,7 @@ export default function Home() {
   }, [adjustLogoSize]);
 
   return (
-    <div>
+    <>
       <img id="logo" src="images/logo.svg" alt="Logo" />
 
       <div
@@ -58,15 +57,13 @@ export default function Home() {
         </div>
       </div>
       <a-scene
+      className="w-full"
         mindar-image="filterMinCF:0.0001; filterBeta: 0.001; imageTargetSrc: /images/targets.mind; uiScanning: #scanning-overlay; uiLoading: #custom-loading-overlay;"
         xr-mode-ui="enabled: false"
         device-orientation-permission-ui="enabled: false"
       >
         <a-assets>
-          <a-asset-item
-            id="model1"
-            src="/images/scene.gltf"
-          ></a-asset-item>
+          <a-asset-item id="model1" src="/images/scene.gltf"></a-asset-item>
         </a-assets>
 
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
@@ -81,6 +78,6 @@ export default function Home() {
           ></a-gltf-model>
         </a-entity>
       </a-scene>
-    </div>
+    </>
   );
 }
