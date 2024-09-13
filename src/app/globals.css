@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+#logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  max-width: 25%;
+  max-height: 25%;
+  z-index: 1000;
+}
+
+.mindar-ui-loading {
+  flex-direction: column;
+}
+.loading-text {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.mindar-ui-scanning .scanning .inner {
+  position: relative;
+}
+
+.mindar-ui-scanning .scanning .inner .target-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 85%;
+  max-height: 85%;
+  z-index: 0;
+  opacity: 0.50;
+}
+
+.mindar-ui-scanning .scanning .inner .scanline,
+.mindar-ui-scanning .scanning .inner::before,
+.mindar-ui-scanning .scanning .inner::after {
+  z-index: 2;
+  position: relative;
+}
