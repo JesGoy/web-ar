@@ -24,7 +24,7 @@ export default function WelcomePage({ setStart }: { setStart: React.Dispatch<Rea
         </div>
         <div className="w-60">
           <p className="text-lg text-[#2F2D2C;]">
-            <b>Realidad Aumentada</b> Parque Nacional Conguillío
+            <b>Realidad Aumentada</b><br/> Parque Nacional Conguillío
           </p>
           <p className="text-sm text-[#8E8D8A;] mt-5"> Conoce el parque y su fauna silvestre típica de la región.</p>
         </div>
