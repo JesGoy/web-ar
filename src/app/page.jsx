@@ -80,6 +80,7 @@ export default function Home() {
         className="mindar-ui-overlay mindar-ui-loading bg-white p-8"
       >
         <LoadAnimation />
+        <p className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center text-xl -mt-38"><b>Cargando...</b></p>
       </div>
       <div
         id="scanning-overlay"

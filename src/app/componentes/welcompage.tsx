@@ -11,7 +11,7 @@ export default function WelcomePage({ setStart }: { setStart: any }) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   return (
     <>
-      <div className="flex flex-col items-center justify-center min-h-screen p-4 bg-white">
+      <div className="flex flex-col items-center justify-center min-h-screen p-3 bg-white">
         <div className="flex flex-col items-center space-y-4">
           <Image
             src="/images/logo-asamblea-full.svg"
@@ -22,11 +22,13 @@ export default function WelcomePage({ setStart }: { setStart: any }) {
             style={{ aspectRatio: "150/150" }}
           />
         </div>
-        <div className="w-48">
-          <p className="text-lg text-[#2F2D2C;]">Realidad Aumentada</p>
-          <p className="text-xs text-[#8E8D8A;]"></p>
+        <div className="w-60">
+          <p className="text-lg text-[#2F2D2C;]">
+            <b>Realidad Aumentada Parque Nacional Conguillío</b>
+          </p>
+          <p className="text-sm text-[#8E8D8A;] mt-5"> Conoce el parque y su fauna silvestre típica de la región.</p>
         </div>
-        <div className="mt-48">
+        <div className="mt-36">
           <button
             className="flex items-center justify-center space-x-2 h-10 px-10 py-6 text-sm font-medium text-white bg-[#2C7C89] rounded-full transition-colors hover:bg-[#256973]  disabled:opacity-50 disabled:pointer-events-none"
             onClick={() => setIsOpen(true)}
@@ -34,9 +36,9 @@ export default function WelcomePage({ setStart }: { setStart: any }) {
             Comenzar <ArrowRight size={16} className="ml-2" />
           </button>
         </div>
-        <footer className="absolute bottom-4 text-xs text-gray-400">
+        {/* <footer className="absolute bottom-4 text-xs text-gray-400">
           V.0.0.1
-        </footer>
+        </footer> */}
       </div>
       <div className="w-full flex justify-center">
         <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
@@ -55,7 +57,9 @@ export default function WelcomePage({ setStart }: { setStart: any }) {
                   </div>
                 </div>
                 <div className="justify-center flex mt-24 px-4">
-                  <p className="text-[#8E8D8A] text-[20px] text-center">Coloca en el centro este simbolo para descubrir lo que tenemos preparado para ti</p>
+                  <p className="text-[#8E8D8A] text-[20px] text-center">
+                  Enfoca los marcadores para ver el contenido en realidad aumentada.
+                  </p>
                 </div>
                 <div className="flex justify-center mt-4 text-white">
                   <button

@@ -19,7 +19,7 @@ const LoadAnimation = () => {
     return () => anim.destroy(); // Limpia la animación al desmontar el componente
   }, [animationData]);
 
-  return <div ref={container} style={{ width: '100%', height: '100%' }} />;
+  return <><div ref={container} style={{ width: '100%', height: '100%' }} /></>;
 };
 
 export default LoadAnimation;
