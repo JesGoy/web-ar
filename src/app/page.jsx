@@ -1,13 +1,22 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
+import WelcomePage from "./componentes/welcompage";
 
-const ARScene = dynamic(() => import('../app/componentes/ARScene'), { ssr: false });
+const ARScene = dynamic(() => import("../app/componentes/ARScene"), {
+  ssr: false,
+});
+const LoadAnimation = dynamic(
+  () => import("@/app/componentes/load-animation"),
+  {
+    ssr: false,
+  }
+);
 
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
   const containerRef = useRef(null);
-
+  const [start, setStart] = useState(false);
   useEffect(() => {
     setIsClient(true);
 
@@ -19,10 +28,10 @@ export default function Home() {
     };
 
     handleResize(); // Llamar inicialmente
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -48,22 +57,50 @@ export default function Home() {
     }
   }, [isClient]);
 
-  return (
-    <div ref={containerRef} style={{ position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', overflow: 'hidden' }}>
-      <img id="logo" src="images/logo.svg" alt="Logo" style={{ position: 'absolute', zIndex: 2 }} />
-      <div id="custom-loading-overlay" className="mindar-ui-overlay mindar-ui-loading">
-        <div className="loading-text">Cargando...</div>
-        <div className="loader"></div>
+  return start ? (
+    <div
+      ref={containerRef}
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        overflow: "hidden",
+      }}
+    >
+      <img
+        id="logo"
+        src="images/logo.svg"
+        alt="Logo"
+        style={{ position: "absolute", zIndex: 2 }}
+      />
+      <div
+        id="custom-loading-overlay"
+        className="mindar-ui-overlay mindar-ui-loading bg-white p-8"
+      >
+        <LoadAnimation />
       </div>
-      <div id="scanning-overlay" className="mindar-ui-overlay mindar-ui-scanning">
+      <div
+        id="scanning-overlay"
+        className="mindar-ui-overlay mindar-ui-scanning"
+      >
         <div className="scanning">
           <div className="inner">
-            <img src="images/target.jpg" alt="Target" className="target-image" />
-            <div className="scanline"></div>
+            <img
+              src="images/logo-simple.svg"
+              alt="Target"
+              className="target-image"
+              width={200}
+              height={200}
+            />
+            <div className="bg-orangejw scanline"></div>
           </div>
         </div>
       </div>
       {isClient && <ARScene />}
     </div>
+  ) : (
+    <WelcomePage setStart={setStart} />
   );
 }

@@ -58,6 +58,7 @@ export default function ARScene() {
         height: "100%",
         overflow: "hidden",
       }}
+      
     >
       <a-assets>
         <a-asset-item id="model1" src="/images/scene.gltf"></a-asset-item>
