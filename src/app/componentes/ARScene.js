@@ -43,7 +43,7 @@ export default function ARScene() {
   return (
     <a-scene
       ref={sceneRef}
-      mindar-image="filterMinCF:0.0001; filterBeta: 0.001; imageTargetSrc: /targets_v4.mind; uiScanning: #scanning-overlay; uiLoading: #custom-loading-overlay;"
+      mindar-image="filterMinCF:0.0001; filterBeta: 0.001; imageTargetSrc: /aecl24/webar/targets_v4.mind; uiScanning: #scanning-overlay; uiLoading: #custom-loading-overlay;"
       color-space="sRGB"
       embedded
       renderer="colorManagement: true, physicallyCorrectLights"
@@ -62,19 +62,19 @@ export default function ARScene() {
       <a-assets>
         <a-asset-item
           id="model0"
-          src="/3d/VolcanLlaima_LagoConguillio_V03_CON.glb"
+          src="/aecl24/webar/3d/VolcanLlaima_LagoConguillio_V03_CON.glb"
         ></a-asset-item>
         <a-asset-item
           id="model1"
-          src="/3d/ARAUCARIA_V07_CON.glb"
+          src="/aecl24/webar/3d/ARAUCARIA_V07_CON.glb"
         ></a-asset-item>
         <a-asset-item
           id="model2"
-          src="/3d/Carpintero_Negro_V04_CON.glb"
+          src="/aecl24/webar/3d/Carpintero_Negro_V04_CON.glb"
         ></a-asset-item>
         <a-asset-item
           id="model3"
-          src="/3d/Monito_Del_Monte_V01.glb"
+          src="/aecl24/webar/3d/Monito_Del_Monte_V01.glb"
         ></a-asset-item>
       </a-assets>
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>

@@ -14,7 +14,7 @@ export default function WelcomePage({ setStart }: { setStart: any }) {
       <div className="flex flex-col items-center justify-center min-h-screen p-3 bg-white">
         <div className="flex flex-col items-center space-y-4">
           <Image
-            src="/images/logo-asamblea-full.svg"
+            src="/aecl24/webar/images/logo-asamblea-full.svg"
             alt="Chile 2024 Logo"
             className="w-50"
             width="193"
@@ -53,7 +53,7 @@ export default function WelcomePage({ setStart }: { setStart: any }) {
               <div className="items-center flex-col">
                 <div className="justify-center flex mt-24">
                   <div className="h-72 w-72 flex justify-center">
-                    <img alt="Simbolo scan" src="/images/img-simbolo.svg" />
+                    <img alt="Simbolo scan" src="/aecl24/webar/images/img-simbolo.svg" />
                   </div>
                 </div>
                 <div className="justify-center flex mt-24 px-4">
