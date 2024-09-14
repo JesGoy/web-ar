@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import "aframe";
+import "aframe-extras";
 import "mind-ar/dist/mindar-image-aframe.prod.js";
 
 export default function ARScene() {
@@ -42,22 +43,11 @@ export default function ARScene() {
 
   return (
     <a-scene
-      ref={sceneRef}
-      mindar-image="filterMinCF:0.0001; filterBeta: 0.001; imageTargetSrc: /targets_v4.mind; uiScanning: #scanning-overlay; uiLoading: #custom-loading-overlay;"
-      color-space="sRGB"
-      embedded
-      renderer="colorManagement: true, physicallyCorrectLights"
+      mindar-image="maxTrack: 1; filterMinCF:0.0001; filterBeta: 0.001; imageTargetSrc: /target/targets.mind; uiScanning: #scanning-overlay; uiLoading: #custom-loading-overlay;"
       xr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false"
-      vr-mode-ui="enabled: false"
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "100%",
-        overflow: "hidden",
-      }}
+      color-space="sRGB"
+      renderer="colorManagement: true, physicallyCorrectLights"
     >
       <a-assets>
         <a-asset-item
@@ -66,7 +56,7 @@ export default function ARScene() {
         ></a-asset-item>
         <a-asset-item
           id="model1"
-          src="/3d/ARAUCARIA_V07_CON.glb"
+          src="/3d/ARAUCARIA_V08_CON.glb"
         ></a-asset-item>
         <a-asset-item
           id="model2"
@@ -77,6 +67,7 @@ export default function ARScene() {
           src="/3d/Monito_Del_Monte_V01.glb"
         ></a-asset-item>
       </a-assets>
+
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
@@ -86,7 +77,8 @@ export default function ARScene() {
           scale="0.75 0.75 0.75"
           src="#model0"
           animation-mixer
-        ></a-gltf-model>
+        >
+        </a-gltf-model>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 1">
         <a-gltf-model
@@ -95,7 +87,8 @@ export default function ARScene() {
           scale="0.1 0.1 0.1"
           src="#model1"
           animation-mixer
-        ></a-gltf-model>
+        >
+        </a-gltf-model>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 2">
         <a-gltf-model
@@ -104,7 +97,8 @@ export default function ARScene() {
           scale="0.7 0.7 0.7"
           src="#model2"
           animation-mixer
-        ></a-gltf-model>
+        >
+        </a-gltf-model>
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 3">
         <a-gltf-model
@@ -113,7 +107,8 @@ export default function ARScene() {
           scale="1 1 1"
           src="#model3"
           animation-mixer
-        ></a-gltf-model>
+        >
+        </a-gltf-model>
       </a-entity>
     </a-scene>
   );

@@ -24,7 +24,7 @@ export default function WelcomePage({ setStart }: { setStart: React.Dispatch<Rea
         </div>
         <div className="w-60">
           <p className="text-lg text-[#2F2D2C;]">
-            <b>Realidad Aumentada Parque Nacional Conguillío</b>
+            <b>Realidad Aumentada</b> Parque Nacional Conguillío
           </p>
           <p className="text-sm text-[#8E8D8A;] mt-5"> Conoce el parque y su fauna silvestre típica de la región.</p>
         </div>
@@ -45,11 +45,12 @@ export default function WelcomePage({ setStart }: { setStart: React.Dispatch<Rea
           <Dialog.Portal>
             <Dialog.Overlay className="bg-blackA6 data-[state=open]:animate-overlayShow fixed inset-0 p-0" />
             <Dialog.Content
-              className={`fixed z-50 bottom-0 left-0 right-0 top-auto h-full w-full max-w-full rounded-t-[25px]  bg-white p-[25px] shadow-lg ${
+              className={`fixed z-50 bottom-0 left-0 right-0 top-auto flex items-center h-full w-full max-w-full rounded-t-[25px]  bg-white p-[25px] shadow-lg ${
                 isOpen ? "animate-slideInUp" : "animate-slideOutDown"
               } focus:outline-none`}
               style={{ padding: 0 }}
             >
+              <Dialog.Title className="P-0"/>
               <div className="items-center flex-col">
                 <div className="justify-center flex mt-24">
                   <div className="h-72 w-72 flex justify-center">
