@@ -4,7 +4,7 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function WelcomePage({ setStart }: { setStart: any }) {
+export default function WelcomePage({ setStart }: { setStart: React.Dispatch<React.SetStateAction<boolean>> }) {
   function handleClickStartButton() {
     setStart(true);
   }
