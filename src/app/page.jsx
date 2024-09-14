@@ -81,7 +81,7 @@ export default function Home() {
       >
         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
           <LoadAnimation />
-          <p className="text-center text-xl -mt-38">
+          <p className="text-center text-xl -mt-38 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
             <b>Cargando...</b>
           </p>
         </div>
