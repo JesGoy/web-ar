@@ -43,7 +43,7 @@ export default function ARScene() {
 
   return (
     <a-scene
-      mindar-image="maxTrack: 1; filterMinCF:0.0001; filterBeta: 0.001; imageTargetSrc: /target/targets.mind; uiScanning: #scanning-overlay; uiLoading: #custom-loading-overlay;"
+      mindar-image="maxTrack: 1; filterMinCF:0.0001; filterBeta: 0.001; imageTargetSrc: /aecl24/webar/target/targets.mind; uiScanning: #scanning-overlay; uiLoading: #custom-loading-overlay;"
       xr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false"
       color-space="sRGB"
@@ -56,7 +56,7 @@ export default function ARScene() {
         ></a-asset-item>
         <a-asset-item
           id="model1"
-          src="/3d/ARAUCARIA_V08_CON.glb"
+          src="/aecl24/webar/3d/ARAUCARIA_V08_CON.glb"
         ></a-asset-item>
         <a-asset-item
           id="model2"

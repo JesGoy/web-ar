@@ -71,7 +71,7 @@ export default function Home() {
     >
       <img
         id="logo"
-        src="images/logo.svg"
+        src="/aecl24/webar/images/logo.svg"
         alt="Logo"
         style={{ position: "absolute", zIndex: 2 }}
       />
@@ -93,7 +93,7 @@ export default function Home() {
         <div className="scanning">
           <div className="inner">
             <img
-              src="aecl24/webar/images/logo-simple.svg"
+              src="/aecl24/webar/images/logo-simple.svg"
               alt="Target"
               className="target-image"
               width={200}
