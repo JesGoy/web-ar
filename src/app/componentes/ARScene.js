@@ -83,7 +83,7 @@ export default function ARScene() {
         <a-gltf-model
           rotation="-135 90 90"
           position="0 0 0"
-          scale="0.5 0.5 0.5"
+          scale="0.75 0.75 0.75"
           src="#model0"
           animation-mixer
         ></a-gltf-model>
