@@ -2,6 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import dynamic from "next/dynamic";
 import WelcomePage from "./componentes/welcompage";
+import { FormattedMessage } from "react-intl";
 
 const ARScene = dynamic(() => import("../app/componentes/ARScene"), {
   ssr: false,
@@ -82,7 +83,7 @@ export default function Home() {
         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
           <LoadAnimation />
           <p className="text-center text-xl -mt-38 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-            <b>Cargando...</b>
+            <b><FormattedMessage id="app.loading"/></b>
           </p>
         </div>
       </div>
