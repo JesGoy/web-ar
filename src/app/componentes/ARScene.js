@@ -20,14 +20,13 @@ export default function ARScene() {
   const target2 = useRef(null);
   const target3 = useRef(null);
   const target4 = useRef(null);
-  const target5 = useRef(null);
-  const target6 = useRef(null);
+
   function addListenerTarget(target, name) {
-    target.current.addEventListener("targetFound", (event) => {
+    target.current.addEventListener("targetFound", () => {
       showTargetName(name);
     });
 
-    target.current.addEventListener("targetLost", (event) => {
+    target.current.addEventListener("targetLost", () => {
       hideTargetName();
     });
   }
