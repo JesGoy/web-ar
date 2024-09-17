@@ -3,6 +3,8 @@ import * as Dialog from "@radix-ui/react-dialog";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import { FormattedMessage } from "react-intl";
+
 
 export default function WelcomePage({ setStart }: { setStart: React.Dispatch<React.SetStateAction<boolean>> }) {
   function handleClickStartButton() {
@@ -23,17 +25,17 @@ export default function WelcomePage({ setStart }: { setStart: React.Dispatch<Rea
           />
         </div>
         <div className="w-60">
-          <p className="text-lg text-[#2F2D2C;]">
-            <b>Realidad Aumentada</b><br/> Parque Nacional Conguillío
+          <p className="text-lg text-[#31302c]">
+            <b><FormattedMessage id="app.title"/></b><br/> <FormattedMessage id="app.subtitle"/>
           </p>
-          <p className="text-sm text-[#8E8D8A;] mt-5"> Conoce el parque y su fauna silvestre típica de la región.</p>
+          <p className="text-sm text-[#8E8D8A;] mt-5"> <FormattedMessage id="app.description"/></p>
         </div>
         <div className="mt-36">
           <button
             className="flex items-center justify-center space-x-2 h-10 px-10 py-6 text-sm font-medium text-white bg-[#2C7C89] rounded-full transition-colors hover:bg-[#256973]  disabled:opacity-50 disabled:pointer-events-none"
             onClick={() => setIsOpen(true)}
           >
-            Comenzar <ArrowRight size={16} className="ml-2" />
+            <FormattedMessage id="app.button"/> <ArrowRight size={16} className="ml-2" />
           </button>
         </div>
         {/* <footer className="absolute bottom-4 text-xs text-gray-400">
@@ -59,7 +61,7 @@ export default function WelcomePage({ setStart }: { setStart: React.Dispatch<Rea
                 </div>
                 <div className="justify-center flex mt-24 px-4">
                   <p className="text-[#8E8D8A] text-[20px] text-center">
-                  Enfoca los marcadores para ver el contenido en realidad aumentada.
+                  <FormattedMessage id="app.instructions"/>
                   </p>
                 </div>
                 <div className="flex justify-center mt-4 text-white">

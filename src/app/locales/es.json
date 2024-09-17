@@ -1,0 +1,8 @@
+{
+    "app.title": "Realidad Aumentada",
+    "app.subtitle": "Parque Nacional Conguillío",
+    "app.description": "Conoce el parque y su fauna silvestre típica de la región.",
+    "app.instructions": "Enfoca los marcadores para ver el contenido en realidad aumentada.",
+    "app.button": "Comenzar",
+    "app.loading": "Cargando..."
+}

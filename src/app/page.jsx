@@ -2,6 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import dynamic from "next/dynamic";
 import WelcomePage from "./componentes/welcompage";
+import { FormattedMessage } from "react-intl";
 
 const ARScene = dynamic(() => import("../app/componentes/ARScene"), {
   ssr: false,
@@ -12,7 +13,15 @@ const LoadAnimation = dynamic(
     ssr: false,
   }
 );
-
+const targets = {
+  target0: "Parque Nacional Conguillío",
+  target1: "Araucaria",
+  target2: "Carpintero negro",
+  target3: "Monito del monte",
+  target4: "Puma",
+  target5: "Güiña",
+  target6: "Salto Truful Truful"
+};
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
   const containerRef = useRef(null);
@@ -81,8 +90,8 @@ export default function Home() {
       >
         <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
           <LoadAnimation />
-          <p className="text-center text-xl -mt-38 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-            <b>Cargando...</b>
+          <p className="text-center text-xl text-[#31302c]  -mt-38 absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+            <b><FormattedMessage id="app.loading"/></b>
           </p>
         </div>
       </div>
