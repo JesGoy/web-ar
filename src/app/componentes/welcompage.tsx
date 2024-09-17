@@ -25,7 +25,7 @@ export default function WelcomePage({ setStart }: { setStart: React.Dispatch<Rea
           />
         </div>
         <div className="w-60">
-          <p className="text-lg text-[#2F2D2C;]">
+          <p className="text-lg text-[#31302c]">
             <b><FormattedMessage id="app.title"/></b><br/> <FormattedMessage id="app.subtitle"/>
           </p>
           <p className="text-sm text-[#8E8D8A;] mt-5"> <FormattedMessage id="app.description"/></p>

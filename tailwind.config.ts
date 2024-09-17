@@ -12,52 +12,67 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         greenjw: "#2C7C89",
-        orangejw: "#FF7D43"
+        orangejw: "#FF7D43",
       },
       keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' }
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' }
-        },
-        'slideInUp': {
+        slideInFromLeft: {
           from: {
-            transform: 'translateY(100%)'
+            transform: "translateX(-100%)",
           },
           to: {
-            transform: 'translateY(0)'
-          }
+            transform: "translateX(0)",
+          },
         },
-        'slideOutDown': {
+        slideOutToLeft: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(-100%)" },
+        },
+        "accordion-down": {
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        slideInUp: {
           from: {
-            transform: 'translateY(0)'
+            transform: "translateY(100%)",
           },
           to: {
-            transform: 'translateY(100%)'
+            transform: "translateY(0)",
           },
-          
+        },
+        slideOutDown: {
+          from: {
+            transform: "translateY(0)",
+          },
+          to: {
+            transform: "translateY(100%)",
+          },
         },
         overlayShow: {
-          from: { opacity: '0' },
-          to: { opacity: '1' },
+          from: { opacity: "0" },
+          to: { opacity: "1" },
         },
         contentShow: {
-          from: { opacity: '0', transform: 'translate(-50%, -48%) scale(0.96)' },
-          to: { opacity: '1', transform: 'translate(-50%, -50%) scale(1)' },
+          from: {
+            opacity: "0",
+            transform: "translate(-50%, -48%) scale(0.96)",
+          },
+          to: { opacity: "1", transform: "translate(-50%, -50%) scale(1)" },
         },
-        
       },
       animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-       'slideInUp':'slideInUp 0.3s ease-out forwards;',
-        'slideOutDown':'slideOutDown 0.3s ease-out forwards;',
-        overlayShow: 'overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
-        contentShow: 'contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)',
-      }
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+        slideInUp: "slideInUp 0.3s ease-out forwards;",
+        slideOutDown: "slideOutDown 0.3s ease-out forwards;",
+        overlayShow: "overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+        contentShow: "contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1)",
+        slideInFromLeft: "slideInFromLeft 0.3s ease-out forwards",
+        slideOutToLeft: "slideOutToLeft 0.3s ease-out forwards",
+      },
     },
   },
   plugins: [],
