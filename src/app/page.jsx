@@ -13,15 +13,7 @@ const LoadAnimation = dynamic(
     ssr: false,
   }
 );
-const targets = {
-  target0: "Parque Nacional Conguillío",
-  target1: "Araucaria",
-  target2: "Carpintero negro",
-  target3: "Monito del monte",
-  target4: "Puma",
-  target5: "Güiña",
-  target6: "Salto Truful Truful"
-};
+
 export default function Home() {
   const [isClient, setIsClient] = useState(false);
   const containerRef = useRef(null);
