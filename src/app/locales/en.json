@@ -1,8 +1,8 @@
 {
     "app.title": "Augmented Reality",
-    "app.subtitle": "Parque Nacional Conguillío",
-    "app.description": "Get to know the park and its wildlife typical of the region.",
-    "app.instructions": "Focus on markers to view content in augmented reality.",
+    "app.subtitle": "Conguillío National Park",
+    "app.description": "Discover the park and its typical wildlife of the region.",
+    "app.instructions": "Focus on markers to view the content in augmented reality.",
     "app.button": "Start",
     "app.loading": "Loading..."
 }

@@ -45,6 +45,7 @@ export default function ARScene() {
     <a-scene
       mindar-image="maxTrack: 1; filterMinCF:0.0001; filterBeta: 0.001; imageTargetSrc: /target/targets.mind; uiScanning: #scanning-overlay; uiLoading: #custom-loading-overlay;"
       xr-mode-ui="enabled: false"
+      loading-screen="enabled: false"
       device-orientation-permission-ui="enabled: false"
       color-space="sRGB"
       renderer="colorManagement: true, physicallyCorrectLights"
@@ -65,6 +66,10 @@ export default function ARScene() {
         <a-asset-item
           id="model3"
           src="/3d/Monito_Del_Monte_V01.glb"
+        ></a-asset-item>
+        <a-asset-item
+          id="model4"
+          src="/3d/PUMA_V04.glb"
         ></a-asset-item>
       </a-assets>
 
@@ -106,6 +111,16 @@ export default function ARScene() {
           position="0.25 0 0"
           scale="1 1 1"
           src="#model3"
+          animation-mixer
+        >
+        </a-gltf-model>
+      </a-entity>
+      <a-entity mindar-image-target="targetIndex: 4">
+        <a-gltf-model
+          rotation="60 90 90"
+          position="0 0 0"
+          scale="1 1 1"
+          src="#model4"
           animation-mixer
         >
         </a-gltf-model>
