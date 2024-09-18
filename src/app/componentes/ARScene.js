@@ -98,7 +98,7 @@ export default function ARScene() {
     );
     addListenerTarget(
       target4,
-      language == "es" ? "⁠Puma, felino grande" : "Monito del Monte, marsupial"
+      language == "es" ? "⁠Puma, felino grande" : "Puma, big feline"
     );
 
     return () => {
