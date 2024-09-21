@@ -20,6 +20,8 @@ export default function ARScene() {
   const target2 = useRef(null);
   const target3 = useRef(null);
   const target4 = useRef(null);
+  const target5 = useRef(null);
+  const target6 = useRef(null);
 
   function addListenerTarget(target, name) {
     target.current.addEventListener("targetFound", () => {
@@ -100,6 +102,14 @@ export default function ARScene() {
       target4,
       language == "es" ? "⁠Puma, felino grande" : "Puma, big feline"
     );
+    addListenerTarget(
+      target5,
+      language == "es" ? "Güiña, felino pequeño" : "Güiña, small feline"
+    );
+    addListenerTarget(
+      target6,
+      language == "es" ? "Salto Truful Truful " : "Truful Truful waterfall"
+    );
 
     return () => {
       window.removeEventListener("resize", handleResize);
@@ -120,23 +130,25 @@ export default function ARScene() {
         <a-assets>
           <a-asset-item
             id="model0"
-            src="/aecl24/webar/3d/VolcanLlaima_LagoConguillio_V03_CON.glb"
+            src="/aecl24/webar/3d/1_VolcanLlaima.glb"
           ></a-asset-item>
           <a-asset-item
             id="model1"
-            src="/aecl24/webar/3d/ARAUCARIA_V08_CON.glb"
+            src="/aecl24/webar/3d/2_Araucaria.glb"
           ></a-asset-item>
           <a-asset-item
             id="model2"
-            src="/aecl24/webar/3d/Carpintero_Negro_V04_CON.glb"
+            src="/aecl24/webar/3d/3_CarpinteroNegro.glb"
           ></a-asset-item>
           <a-asset-item
             id="model3"
-            src="/aecl24/webar/3d/Monito_Del_Monte_V01.glb"
+            src="/aecl24/webar/3d/4_MonitoDelMonte.glb"
           ></a-asset-item>
+          <a-asset-item id="model4" src="/aecl24/webar/3d/5_Puma.glb"></a-asset-item>
+          <a-asset-item id="model5" src="/aecl24/webar/3d/6_Guina.glb"></a-asset-item>
           <a-asset-item
-            id="model4"
-            src="/aecl24/webar/3d/PUMA_V04.glb"
+            id="model6"
+            src="/aecl24/webar/3d/7_SaltoTrufulTruful.glb"
           ></a-asset-item>
         </a-assets>
 
@@ -204,6 +216,32 @@ export default function ARScene() {
             position="0 0 0"
             scale="1 1 1"
             src="#model4"
+            animation-mixer
+          ></a-gltf-model>
+        </a-entity>
+        <a-entity
+          id="target5"
+          ref={target5}
+          mindar-image-target="targetIndex: 5"
+        >
+          <a-gltf-model
+            rotation="90 90 90"
+            position="0 0.3 0"
+            scale="2 2 2"
+            src="#model5"
+            animation-mixer
+          ></a-gltf-model>
+        </a-entity>
+        <a-entity
+          id="target6"
+          ref={target6}
+          mindar-image-target="targetIndex: 6"
+        >
+          <a-gltf-model
+            rotation="0 0 0"
+            position="0 0 0"
+            scale="1 1 1"
+            src="#model6"
             animation-mixer
           ></a-gltf-model>
         </a-entity>
