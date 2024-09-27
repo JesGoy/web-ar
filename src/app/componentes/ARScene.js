@@ -153,98 +153,77 @@ export default function ARScene() {
         </a-assets>
 
         <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
-
-        <a-entity
-          id="target0"
-          ref={target0}
-          mindar-image-target="targetIndex: 0"
+        <a-entity id="target0"  ref={target0} mindar-image-target="targetIndex: 0">
+        <a-gltf-model
+          rotation="-140 75 115"
+          position="0.1 0.15 0"
+          scale="0.75 0.75 0.75"
+          src="#model0"
+          animation-mixer
         >
-          <a-gltf-model
-            rotation="-135 90 90"
-            position="0 0 0"
-            scale="0.75 0.75 0.75"
-            src="#model0"
-            animation-mixer
-          ></a-gltf-model>
-        </a-entity>
-        <a-entity
-          id="target1"
-          ref={target1}
-          mindar-image-target="targetIndex: 1"
+        </a-gltf-model>
+      </a-entity>
+      <a-entity id="target1"  ref={target1} mindar-image-target="targetIndex: 1">
+        <a-gltf-model
+          rotation="7 0 0"
+          position="0 -0.7 0"
+          scale="0.1 0.1 0.1"
+          src="#model1"
+          animation-mixer
         >
-          <a-gltf-model
-            rotation="0 0 0"
-            position="0 -0.7 0"
-            scale="0.1 0.1 0.1"
-            src="#model1"
-            animation-mixer
-          ></a-gltf-model>
-        </a-entity>
-        <a-entity
-          id="target2"
-          ref={target2}
-          mindar-image-target="targetIndex: 2"
+        </a-gltf-model>
+      </a-entity>
+      <a-entity id="target2" ref={target2}  mindar-image-target="targetIndex: 2">
+        <a-gltf-model
+          rotation="-100 0 150"
+          position="0.1 0 0"
+          scale="0.7 0.7 0.7"
+          src="#model2"
+          animation-mixer
         >
-          <a-gltf-model
-            rotation="-90 90 90"
-            position="0 0 0"
-            scale="0.7 0.7 0.7"
-            src="#model2"
-            animation-mixer
-          ></a-gltf-model>
-        </a-entity>
-        <a-entity
-          id="target3"
-          ref={target3}
-          mindar-image-target="targetIndex: 3"
+        </a-gltf-model>
+      </a-entity>
+      <a-entity id="target3"  ref={target3} mindar-image-target="targetIndex: 3">
+        <a-gltf-model
+          rotation="0 90 60"
+          position="-0.1 0 0"
+          scale="0.7 0.7 0.7"
+          src="#model3"
+          animation-mixer
         >
-          <a-gltf-model
-            rotation="0 90 45"
-            position="0.25 0 0"
-            scale="1 1 1"
-            src="#model3"
-            animation-mixer
-          ></a-gltf-model>
-        </a-entity>
-        <a-entity
-          id="target4"
-          ref={target4}
-          mindar-image-target="targetIndex: 4"
+        </a-gltf-model>
+      </a-entity>
+      <a-entity id="target4"  ref={target4} mindar-image-target="targetIndex: 4">
+        <a-gltf-model
+          rotation="55 60 60"
+          position="-0.05 0.1 0"
+          scale="1 1 1"
+          src="#model4"
+          animation-mixer
         >
-          <a-gltf-model
-            rotation="60 90 90"
-            position="0 0 0"
-            scale="1 1 1"
-            src="#model4"
-            animation-mixer
-          ></a-gltf-model>
-        </a-entity>
-        <a-entity
-          id="target5"
-          ref={target5}
-          mindar-image-target="targetIndex: 5"
+        </a-gltf-model>
+      </a-entity>
+      <a-entity id="target5"  ref={target5} mindar-image-target="targetIndex: 5">
+        <a-gltf-model
+          rotation="53 -68 -76"
+          position="0.1 0.2 0"
+          scale="2 2 2"
+          src="#model5"
+          animation-mixer
         >
-          <a-gltf-model
-            rotation="90 90 90"
-            position="0 0.3 0"
-            scale="2 2 2"
-            src="#model5"
-            animation-mixer
-          ></a-gltf-model>
-        </a-entity>
-        <a-entity
-          id="target6"
-          ref={target6}
-          mindar-image-target="targetIndex: 6"
+        </a-gltf-model>
+      </a-entity>
+      <a-entity id="target6"  ref={target6} mindar-image-target="targetIndex: 6">
+        <a-gltf-model
+          rotation="-80 195 160"
+          position="-1 0.35 0"
+          scale="0.04 0.04 0.04"
+          src="#model6"
+          animation-mixer
         >
-          <a-gltf-model
-            rotation="0 0 0"
-            position="0 0 0"
-            scale="1 1 1"
-            src="#model6"
-            animation-mixer
-          ></a-gltf-model>
-        </a-entity>
+        </a-gltf-model>
+      </a-entity>
+       
       </a-scene>
       <b>
         <label className="" id="target-name" ref={targetName}></label>
